@@ -17,7 +17,7 @@ public class App
       if (array == null) return false;
 
       for (int elt : array) {
-        if (elt == d) return true;
+        if (elt == e) return true;
       }
       return false;
     }
