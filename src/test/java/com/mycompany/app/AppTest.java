@@ -36,17 +36,17 @@ public class AppTest extends TestCase
         assertTrue( true );
     }
     public void testFound() {
-      ArrayList<String> array = new ArrayList<>(Arrays.asList("Hebele" , "komik", "bir", "Irmak"));
-      assertTrue(new App().search(array, "bir"));
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("a" , "b", "c", "d"));
+      assertTrue(new App().search(array, "a"));
     }
 
     public void testNotFound() {
-       ArrayList<String> array = new ArrayList<>(Arrays.asList("Hebele" , "komik", "bir", "Irmak"));
-      assertFalse(new App().search(array, "iki"));
+       ArrayList<String> array = new ArrayList<>(Arrays.asList("a" , "b", "c", "d"));
+      assertFalse(new App().search(array, "e"));
     }
 
     public void testEmptyArray() {
-       ArrayList<String> array = new ArrayList<>(Arrays.asList("Hebele" , "komik", "bir", "Irmak"));
+       ArrayList<String> array = new ArrayList<>();
       assertFalse(new App().search(array, "1"));
     }
 
