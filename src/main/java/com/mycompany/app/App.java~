@@ -12,12 +12,12 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e, int d) {
+    public static boolean search(ArrayList<Integer> array, int e) {
       System.out.println("inside search");
       if (array == null) return false;
 
       for (int elt : array) {
-        if (elt == e) return true;
+        if (elt == d) return true;
       }
       return false;
     }
@@ -25,9 +25,9 @@ public class App
     public static void main(String[] args) {
         port(getHerokuAssignedPort());
 
-        get("/", (req, res, ret) -> "Hello, World");
+        get("/", (req, res) -> "Hello, World");
 
-        post("/compute", (req, res, ret) -> {
+        post("/compute", (req, res) -> {
           //System.out.println(req.queryParams("input1"));
           //System.out.println(req.queryParams("input2"));
 
@@ -44,9 +44,7 @@ public class App
 
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
-	  String input3 = ret.queryParams("input3").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
-	  int input3AsInt = Integer.parseInt(input3);
 
           boolean result = App.search(inputList, input2AsInt,input3AsInt);
 
