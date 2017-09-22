@@ -36,21 +36,21 @@ public class AppTest extends TestCase
         assertTrue( true );
     }
     public void testFound() {
-      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertTrue(new App().search(array, 4));
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("Hebele" , "komik", "bir", "Irmak"));
+      assertTrue(new App().search(array, "bir"));
     }
 
     public void testNotFound() {
-      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
-      assertFalse(new App().search(array, 5));
+       ArrayList<String> array = new ArrayList<>(Arrays.asList("Hebele" , "komik", "bir", "Irmak"));
+      assertFalse(new App().search(array, "iki"));
     }
 
     public void testEmptyArray() {
-      ArrayList<Integer> array = new ArrayList<>();
-      assertFalse(new App().search(array, 1));
+       ArrayList<String> array = new ArrayList<>(Arrays.asList("Hebele" , "komik", "bir", "Irmak"));
+      assertFalse(new App().search(array, "1"));
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, 1));
+      assertFalse(new App().search(null, "2"));
     }
 }
