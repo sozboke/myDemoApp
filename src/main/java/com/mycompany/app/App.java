@@ -12,7 +12,7 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<String> array, String e,String d) {
+    public static boolean search(ArrayList<String> array, String e) {
       System.out.println("inside search");
       if (array == null) return false;
 

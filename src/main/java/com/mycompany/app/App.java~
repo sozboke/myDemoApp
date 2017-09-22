@@ -16,8 +16,8 @@ public class App
       System.out.println("inside search");
       if (array == null) return false;
 
-      for (int elt : array) {
-        if (elt == e) return true;
+      for (String elt : array) {
+        if (elt.equals(e)) return true;
       }
       return false;
     }
