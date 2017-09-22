@@ -49,9 +49,11 @@ public class App
 	  int input3AsInt = Integer.parseInt(input3);
 
           boolean result = App.search(inputList, input3AsInt);
+	  boolean result1 = App.search(inputList, input2AsInt);
 
          Map map = new HashMap();
           map.put("result", result);
+	  map.put("result1", result1);
           return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
 
