@@ -12,14 +12,15 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<String> array, String e) {
+    public static String addIndexToArray(ArrayList<String> array, String e,int d){
+      String result = "";
       System.out.println("inside search");
-      if (array == null) return false;
+      if (array == null) return result;
 
-      for (String elt : array) {
-        if (elt.equals(e)) return true;
-      }
-      return false;
+      array.add(d,e);
+      for(String adder :array)
+         result += adder;
+      return result;
     }
 
     public static void main(String[] args) {
@@ -44,17 +45,16 @@ public class App
 
 
           String input2 = req.queryParams("input2").replaceAll("\\s","");
-          String input2AsInt = input2;
+    
 	  String input3 = req.queryParams("input3").replaceAll("\\s","");
-	  String input3AsInt = input3;
+          int input3AsInt = Integer.parseInt(input3);
 
-	  boolean result = App.search(inputList, input2AsInt);
-          boolean result1 = App.search(inputList, input3AsInt);
+
+	  String result = App.search(inputList, input2, input3AsInt);
 	  
 
          Map map = new HashMap();
           map.put("result", result);
-	  map.put("result1", result1);
           return new ModelAndView(map, "compute.mustache");
         }, new MustacheTemplateEngine());
 
