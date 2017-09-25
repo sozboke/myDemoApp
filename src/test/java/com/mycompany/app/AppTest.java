@@ -45,10 +45,10 @@ public class AppTest extends TestCase
       assertFalse(!(new App().addIndexToArray(array, "e", 4)).equals("abcde"));
     }
 
-    /*public void testEmptyArray() {
+    public void testEmptyArray() {
        ArrayList<String> array = new ArrayList<>();
       assertFalse(new App().search(array, "1"));
-    }*/
+    }
 
     public void testNull() {
       assertFalse((new App().addIndexToArray(null, "e",4)).equals("    e"));
