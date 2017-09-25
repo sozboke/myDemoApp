@@ -50,7 +50,7 @@ public class App
           int input3AsInt = Integer.parseInt(input3);
 
 
-	  String result = App.search(inputList, input2, input3AsInt);
+	  String result = App.addIndexToArray(inputList, input2, input3AsInt);
 	  
 
          Map map = new HashMap();
