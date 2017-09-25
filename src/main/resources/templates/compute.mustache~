@@ -1,5 +1,7 @@
 <title>My application deployed automatically</title>
   <h1>Hello, World!</h1>
+    İlk kutucuğa String listesini girebilirsiniz. 2.Kutucuğa eklenmesini istediğiniz bir string giriniz. Son kutucğa eklenmesini istediğiniz index'i giriniz.
+    Result listenin tamamını yazacaktır.
     Result is {{result}}
 
 
